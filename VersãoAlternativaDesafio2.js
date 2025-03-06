@@ -1,18 +1,14 @@
 let playerName = "Miguel";
-let rankedElos = ranqueamento();
-//let defeatCount = 28;
-//let winBalance = saldoVitorias();
-//let rankedElos = ranqueamento(); 
-//printStatus()
 
-function printStatus(){
-console.log (`O player ${playerName} se encontra num saldo de: *${winBalance}* vitórias, e está no elo: "${rankedElos}" no LOL`);
+function mainStatus(victoryCount, defeatCount){
+    let winBalance = saldoVitorias(victoryCount, defeatCount);
+    let rankedElos = ranqueamento(victoryCount);
+        console.log (`O player ${playerName} se encontra num saldo de: *${winBalance}* vitórias, e está no elo: "${rankedElos}" no LOL`);
 }
-
-function saldoVitorias(){
+function saldoVitorias(victoryCount = 0, defeatCount = 0){
     return victoryCount - defeatCount;
 }
-function ranqueamento(victoryCount = 0, defeatCount = 0){
+function ranqueamento(victoryCount = 0){
 
     switch (true){
 
@@ -46,10 +42,12 @@ break
 
 break
 
-        case (victoryCount && victoryCount  > 100):
+        case (victoryCount > 100):
         return "Imortal";
 
 break
 
     }
 }
+
+mainStatusStatus(39, 20)
