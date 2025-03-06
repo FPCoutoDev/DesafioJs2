@@ -1,2 +1,2 @@
 # DesafioJs2
-Segundo desafio
+Iniciado agora o segundo desafio: Função de ranqueamento automático com JS(java script).
